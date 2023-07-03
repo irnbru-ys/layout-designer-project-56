@@ -1,0 +1,30 @@
+//шаблоны
+%flex-element-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.f-center {
+    @extend %flex-element-center;
+}
+
+%display-flex {
+    display: flex;
+}
+
+.d-flex {
+    @extend %display-flex;
+}
+// END
+
+// Elemints
+
+.my-200 {
+    @include margin-y(200);
+}
+
+.py-200 {
+    @include padding-y(200);
+}
+

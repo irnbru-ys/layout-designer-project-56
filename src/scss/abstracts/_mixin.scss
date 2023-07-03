@@ -1,0 +1,46 @@
+// Миксин для адаптива
+$breakpoints: (
+  breakpoint-sm: 576px,
+  breakpoint-md: 768px,
+  breakpoint-lg: 992px,
+  breakpoint-xl: 1240px,
+);
+
+@mixin media($type: "md", $pixel: null) {
+  @if $type == "xl" {
+    @media screen and (min-width: map-get($breakpoints, breakpoint-#{$type})) {
+      @content;
+    }
+  } @else {
+    @media screen and (max-width: map-get($breakpoints, breakpoint-#{$type})) {
+      @content;
+    }
+  }
+
+  @if $type == "custom" {
+    @media screen and (max-width: $pixel) {
+      @content;
+    }
+  }
+}
+//END
+
+@mixin margin-x($mx) {
+  margin-left: #{$mx}px;
+  margin-right: #{$mx}px;
+}
+
+@mixin margin-y($my) {
+  margin-top: #{$my}px;
+  margin-bottom: #{$my}px;
+}
+
+@mixin padding-x($px) {
+  padding-left: #{$px}px;
+  padding-right: #{$px}px;
+}
+
+@mixin padding-y($py) {
+  padding-top: #{$py}px;
+  padding-bottom: #{$py}px;
+}
