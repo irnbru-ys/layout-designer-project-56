@@ -4,7 +4,11 @@
   align-items: center;
 }
 
-.header-navigation-items, .header-logo-box, .header-navigation, .header-left-part, .d-flex {
+.header-navigation-items,
+.header-logo-box,
+.header-navigation,
+.header-left-part,
+.d-flex {
   display: flex;
 }
 
@@ -111,7 +115,8 @@ h2 {
 }
 
 .footer {
-  background: linear-gradient(220deg, #95390c 8.48%, #5328a1 72.24%) center/cover no-repeat;
+  background: linear-gradient(220deg, #95390c 8.48%, #5328a1 72.24%)
+    center/cover no-repeat;
 }
 
 .footer-subscribe > li {
@@ -329,5 +334,3 @@ h2 {
     margin-bottom: 16px;
   }
 }
-
-/*# sourceMappingURL=style.css.map */
