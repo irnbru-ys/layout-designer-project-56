@@ -43,8 +43,7 @@
 .py-200 {
     @include padding-y(200);
 }
-@include column(1);
-@include column(3);
+
 @include bg-card(1);
 @include bg-card(2);
 @include bg-card(3);

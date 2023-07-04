@@ -39,3 +39,24 @@
 
   text-decoration: none;
 }
+
+.btn-app {
+  display: block;
+
+  width: 131px;
+  height: 53px;
+
+  padding: 17px 40px;
+
+  color: #fff;
+  font-size: 12.8px;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+
+  border-radius: 32px;
+  background: $color-red;
+
+  text-transform: capitalize;
+}
