@@ -23,7 +23,15 @@
 
 .d-grid {
     @extend %display-grid;
-} 
+}
+
+%flex-direction-row-reverse {
+    flex-direction: row-reverse;
+}
+
+.fd-row-revers {
+    @extend %flex-direction-row-reverse;
+}
 // END
 
 // Elemints
@@ -35,7 +43,7 @@
 .py-200 {
     @include padding-y(200);
 }
-
+@include column(1);
 @include column(3);
 @include bg-card(1);
 @include bg-card(2);

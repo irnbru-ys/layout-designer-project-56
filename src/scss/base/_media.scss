@@ -112,4 +112,16 @@
       margin-bottom: 16px;
     }
   }
+
+  .page-news {
+    &-item {
+      flex-direction: column;
+      img {
+        margin-right: 0;
+        margin-bottom: 50px;
+
+        width: 100%;
+      }
+    }
+  }
 }
