@@ -44,3 +44,21 @@ $breakpoints: (
   padding-top: #{$py}px;
   padding-bottom: #{$py}px;
 }
+
+@mixin column($column) {
+  @if $column == 1 {
+    .column-#{$column} {
+      grid-template-columns: 1fr;
+    }
+  } @else {
+    .column-#{$column} {
+      grid-template-columns: repeat(#{$column}, 1fr);
+    }
+  }
+}
+
+@mixin bg-card($name) {
+  .bg-card-#{$name} {
+    background: url("../images/subscribe_#{$name}.png") center / cover no-repeat;
+  }
+}

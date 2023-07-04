@@ -1,5 +1,7 @@
 .page-description {
-  height: 100vh;
+  padding-bottom: 200px;
+
+  // height: 100vh;
 
   background-image: url("../images/banner.png");
   background-position: center;
@@ -63,5 +65,84 @@
     color: white;
     font-size: 14px;
     font-weight: 700;
+  }
+}
+
+.page-pricing {
+  padding-top: 100px;
+
+  color: #fff;
+
+  text-align: center;
+
+  &-card-box {
+    // column-gap: 47px;
+    justify-content: space-between;
+  }
+
+  &-h2 {
+    margin-bottom: 69px;
+  }
+
+  &-item {
+    max-width: 369px;
+
+    margin: 0 auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+
+    border-radius: 16px;
+  }
+
+  &-h3 {
+    margin-top: 24px;
+    font-size: 24px;
+    text-transform: uppercase;
+  }
+
+  &-value {
+    margin-top: 200px;
+    margin-bottom: 40px;
+  }
+
+  &-price {
+    color: #fff;
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 100%;
+  }
+
+  &-currency-uppercase {
+    margin-left: 16px;
+
+    display: inline-block;
+    color: #fff;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 150%;
+
+    vertical-align: top;
+  }
+
+  .btn-price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 auto;
+
+    width: 319px;
+    height: 66px;
+
+    border-radius: 5px;
+    border: 1px solid #fff;
+  }
+
+  &-footer-card-text {
+    @include margin-y(64);
+  }
+
+  &-text {
+    margin-top: 43px;
   }
 }

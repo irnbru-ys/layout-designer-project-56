@@ -16,6 +16,14 @@
 .d-flex {
     @extend %display-flex;
 }
+
+%display-grid {
+    display: grid
+}
+
+.d-grid {
+    @extend %display-grid;
+} 
 // END
 
 // Elemints
@@ -28,3 +36,7 @@
     @include padding-y(200);
 }
 
+@include column(3);
+@include bg-card(1);
+@include bg-card(2);
+@include bg-card(3);
