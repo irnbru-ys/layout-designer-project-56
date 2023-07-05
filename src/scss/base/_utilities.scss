@@ -1,47 +1,48 @@
-//шаблоны
+// шаблоны
 %flex-element-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .f-center {
-    @extend %flex-element-center;
+  @extend %flex-element-center;
 }
 
 %display-flex {
-    display: flex;
+  display: flex;
 }
 
 .d-flex {
-    @extend %display-flex;
+  @extend %display-flex;
 }
 
 %display-grid {
-    display: grid
+  display: grid;
 }
 
 .d-grid {
-    @extend %display-grid;
+  @extend %display-grid;
 }
 
 %flex-direction-row-reverse {
-    flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
 
 .fd-row-revers {
-    @extend %flex-direction-row-reverse;
+  @extend %flex-direction-row-reverse;
 }
+
 // END
 
 // Elemints
 
 .my-200 {
-    @include margin-y(200);
+  @include margin-y(200);
 }
 
 .py-200 {
-    @include padding-y(200);
+  @include padding-y(200);
 }
 
 @include bg-card(1);

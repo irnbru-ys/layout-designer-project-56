@@ -23,7 +23,8 @@ $breakpoints: (
     }
   }
 }
-//END
+
+// END
 
 @mixin margin-x($mx) {
   margin-left: #{$mx}px;

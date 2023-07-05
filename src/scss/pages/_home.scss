@@ -1,13 +1,13 @@
 .page-description {
   padding-bottom: 200px;
 
-  // height: 100vh;
-
-  background-image: url("../images/banner.png");
-  background-position: center;
-  background-size: cover;
-
   text-align: center;
+
+  &-bg-home {
+    background-image: url("../images/banner.png");
+    background-position: center;
+    background-size: cover;
+  }
 
   h2 {
     margin-bottom: 31px;
@@ -46,6 +46,7 @@
       border-radius: 5px;
     }
   }
+
   &-form > label > input {
     min-width: 270px;
     min-height: 50px;
@@ -215,7 +216,7 @@
 
     margin-right: 16px;
 
-    color: $color--orange;
+    color: $color-orange;
     text-transform: uppercase;
   }
 }
@@ -234,6 +235,7 @@
     &-left {
       margin: 16px;
       text-align: left;
+      
       & > p:nth-of-type(2) {
         margin-bottom: 16px;
       }
