@@ -4,7 +4,7 @@
     width: 1200px;
     margin: 0 auto;
   }
-
+ 
   h1 {
     font-size: 60px;
     font-weight: 700;
@@ -171,6 +171,19 @@
 
   .page-discography {
     &-items-box {
+      width: 137px;
+    }
+
+    &-item-image {
+      width: 137px;
+      height: 137px;
+    }
+  }
+
+  // Similar
+
+  .page-similar {
+    &-item-box {
       width: 137px;
     }
 
