@@ -22,6 +22,7 @@
   @include column(1);
   @include column(2);
   @include column(3);
+  @include column(4);
 }
 
 @include media(sm) {
@@ -42,6 +43,8 @@
   * .container {
     @include padding-x(20);
   }
+
+  @include column(2);
 
   .header {
     .container {
@@ -161,6 +164,19 @@
 
     &-buttons-box > a:nth-child(1) {
       margin-bottom: 24px;
+    }
+  }
+
+  // Discography
+
+  .page-discography {
+    &-items-box {
+      width: 137px;
+    }
+
+    &-item-image {
+      width: 137px;
+      height: 137px;
     }
   }
 }
