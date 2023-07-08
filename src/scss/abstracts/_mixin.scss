@@ -3,7 +3,7 @@ $breakpoints: (
   breakpoint-sm: 576px,
   breakpoint-md: 768px,
   breakpoint-lg: 992px,
-  breakpoint-xl: 1240px,
+  breakpoint-xl: 1200px,
 );
 
 @mixin media($type: "md", $pixel: null) {
@@ -49,7 +49,7 @@ $breakpoints: (
 @mixin column($column) {
   @if $column == 1 {
     .column-#{$column} {
-      grid-template-columns: 1fr;
+      grid-template-columns: #{$column}fr;
     }
   } @else {
     .column-#{$column} {
@@ -60,6 +60,12 @@ $breakpoints: (
 
 @mixin bg-card($name) {
   .bg-card-#{$name} {
-    background: url("../images/subscribe_#{$name}.png") center / cover no-repeat;
+    background-image: url("../images/subscribe_#{$name}.png");
+    width: 374px;
+    max-width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
 }

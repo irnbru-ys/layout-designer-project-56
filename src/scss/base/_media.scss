@@ -1,10 +1,10 @@
 @include media(xl) {
   .container {
-    padding: 0 20px;
-    width: 1200px;
+    max-width: 1240px;
     margin: 0 auto;
+    padding: 0 20px;
   }
- 
+
   h1 {
     font-size: 60px;
     font-weight: 700;
@@ -26,6 +26,15 @@
 }
 
 @include media(sm) {
+  .container {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 100%;
+  }
+
+  @include column(2);
+  @include column(1);
+
   h1 {
     font-size: 30px;
     font-weight: 700;
@@ -40,19 +49,17 @@
     text-transform: uppercase;
   }
 
-  * .container {
-    @include padding-x(20);
-  }
-
-  @include column(2);
-
   .header {
     .container {
       flex-direction: column;
     }
 
     &-logo-box {
-      margin-bottom: 17px;
+      margin-bottom: 10px;
+    }
+
+    &-logo-text {
+      margin-top: -7px;
     }
 
     &-left-part {
@@ -61,11 +68,16 @@
 
     &-navigation-items {
       flex-direction: column;
-
       align-items: flex-start;
 
+      padding-left: 0;
+
       margin-left: 0;
-      margin-bottom: 18px;
+      margin-bottom: 16px;
+    }
+
+    &-form-search {
+      margin-top: 3px;
     }
 
     &-form-search-input {
@@ -77,7 +89,12 @@
     height: auto;
 
     h1 {
-      margin-top: 78px;
+      margin-top: 46px;
+    }
+
+    h2 {
+      margin-top: 2px;
+      margin-bottom: 14px;
     }
 
     &-form {
@@ -87,17 +104,69 @@
     &-form > label > input {
       width: 100%;
     }
+
+    &-text {
+      font-size: 16px;
+      line-height: 25px;
+    }
   }
 
   .page-pricing {
     @include column(1);
 
     &-card-box {
-      row-gap: 27px;
+      flex: 1 1 374px;
+      row-gap: 50px;
+      flex-wrap: wrap;
+
+      min-width: 374px;
+      justify-content: center;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    &-item {
+      justify-content: center;
+
+      min-width: 374px;
+      height: 595px;
+
+      background-position-y: -2px;
     }
 
     &-h3 {
+      margin-top: 6px;
+      margin-bottom: 191px;
+
       font-size: 16px;
+    }
+
+    .bg-card-1 {
+      & > p {
+        margin-bottom: 43px;
+      }
+    }
+
+    .bg-card-2 {
+      & > p {
+        margin-bottom: 45px;
+      }
+
+      & > p.page-pricing-footer-card-text {
+        width: 326px;
+      }
+
+      .page-pricing-footer-card-text {
+        font-size: 13px;
+      }
+    }
+
+    .bg-card-3 {
+      & > p {
+        margin-bottom: 45px;
+      }
     }
   }
 
@@ -107,6 +176,8 @@
     &-top-part {
       grid-template-columns: 1fr;
       grid-template-rows: 4fr;
+
+      padding-bottom: 39px;
     }
 
     &-top-part > ul:not(:last-child) {
@@ -141,6 +212,37 @@
       line-height: 24px;
       text-transform: capitalize;
     }
+
+    &-p {
+      margin-top: -12px;
+
+      width: auto;
+
+      line-height: 145%;
+      font-size: 15.9px;
+    }
+
+    &-p2 {
+      margin-bottom: 15px;
+    }
+
+    &-footer {
+      margin-top: 0;
+      margin-bottom: 14px;
+    }
+
+    &-footer:nth-of-type(2) {
+      margin-top: 0;
+      margin-bottom: 13px;
+    }
+
+    &-author {
+      margin-bottom: 61px;
+    }
+
+    .btn-news2 {
+      margin-top: -12px;
+    }
   }
 
   .page-app {
@@ -150,7 +252,22 @@
 
     &-item {
       &-right {
+        padding-right: 20px;
         grid-row: 1 / 2;
+
+        margin-bottom: 0;
+      }
+
+      &-left {
+        margin-top: 0;
+
+        & > p:nth-of-type(1) {
+          margin-top: 10px;
+        }
+
+        & > p:nth-of-type(2) {
+          margin-top: -2px;
+        }
       }
     }
   }
@@ -158,11 +275,14 @@
   // Artist
 
   .page-description-artist {
+    padding-top: 200px;
+    padding-bottom: 200px;
+
     &-h1 {
-      margin-top: 50px;
+      margin-top: 24px;
     }
 
-    &-buttons-box > a:nth-child(1) {
+    &-buttons-box > a {
       margin-bottom: 24px;
     }
   }
@@ -170,13 +290,23 @@
   // Discography
 
   .page-discography {
+    // &-items-box {
+    //   width: auto;
+    // }
+
     &-items-box {
-      width: 137px;
+      grid-template-rows: repeat(3, max-content);
     }
 
     &-item-image {
       width: 137px;
       height: 137px;
+    }
+
+    &-info {
+      margin-top: -6px;
+
+      width: 142px;
     }
   }
 
@@ -188,8 +318,14 @@
     }
 
     &-item-image {
+      margin-bottom: 19px;
+
       width: 137px;
       height: 137px;
+    }
+
+    &-items-box {
+      column-gap: 0;
     }
   }
 }

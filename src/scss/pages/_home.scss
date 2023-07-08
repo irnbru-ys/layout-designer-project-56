@@ -27,6 +27,8 @@
     margin: 0 auto;
     max-width: 570px;
 
+    font-family: Roboto, sans-serif;
+
     &-btn {
       padding: 20px 30px;
 
@@ -37,7 +39,7 @@
 
       color: #fff;
       font-size: 13.3px;
-      font-family: Arial, sans-serif;
+      font-family: Roboto, sans-serif;
       font-weight: 400;
       text-transform: uppercase;
 
@@ -56,6 +58,8 @@
 
     color: #fff;
 
+    font-family: Roboto, sans-serif;
+
     background-color: transparent;
 
     border: 2px solid $color-dark-gray;
@@ -70,43 +74,54 @@
 }
 
 .page-pricing {
-  padding-top: 100px;
-
   color: #fff;
 
   text-align: center;
 
   &-card-box {
-    // column-gap: 47px;
+    column-gap: 50px;
+
     justify-content: space-between;
   }
 
   &-h2 {
-    margin-bottom: 69px;
+    margin-bottom: 50px;
   }
 
   &-item {
-    max-width: 369px;
+    flex: 1 1 366px;
 
-    margin: 0 auto;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding: 0 1.5rem;
+    max-width: 366px;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
 
-    border-radius: 16px;
+    &.bg-card-2 {
+      & > p.page-pricing-footer-card-text {
+        width: 315px;
+      }
+    }
   }
 
   &-h3 {
     margin-top: 24px;
+    margin-bottom: 200px;
+
+    font-weight: 400;
     font-size: 24px;
+    line-height: 36px;
     text-transform: uppercase;
   }
 
   &-value {
-    margin-top: 200px;
-    margin-bottom: 40px;
+    margin-left: 3px;
+    margin-bottom: 41px;
+    line-height: 1rem;
   }
 
   &-price {
+    position: relative;
     color: #fff;
     font-size: 64px;
     font-weight: 400;
@@ -114,7 +129,7 @@
   }
 
   &-currency-uppercase {
-    margin-left: 16px;
+    margin-left: 1rem;
 
     display: inline-block;
     color: #fff;
@@ -127,16 +142,24 @@
 
   &-footer-card-text {
     @include margin-y(64);
+    font-size: 13.1px;
+    font-weight: 400;
+    line-height: 19px;
   }
 
   &-text {
-    margin-top: 43px;
+    padding-top: 37px;
+    color: #fff;
+    text-align: center;
+    font-family: Roboto, sans-serif;
+    font-size: 15.9px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
   }
 }
 
 .page-news {
-  padding-top: 100px;
-
   text-align: center;
 
   &-h2 {
@@ -146,7 +169,7 @@
   &-box {
     grid-auto-rows: auto;
 
-    row-gap: 65px;
+    row-gap: 64px;
   }
 
   &-item {
@@ -157,8 +180,15 @@
 
   &-item > img {
     display: block;
+    margin-right: 54px;
+  }
 
-    margin-right: 50px;
+  &-item-mr-0 {
+    justify-content: space-between;
+  }
+
+  &-item-mr-0 > img {
+    margin-right: 0;
   }
 
   &-body-box {
@@ -171,8 +201,8 @@
   }
 
   &-footer {
-    margin-top: 25px;
     margin-bottom: 16px;
+    margin-top: -4px;
 
     text-align: left;
   }
@@ -188,6 +218,10 @@
   }
 
   &-p {
+    margin-bottom: 24px;
+
+    width: 575px;
+
     color: #cacaca;
     font-size: 16px;
     font-weight: 400;
@@ -195,10 +229,10 @@
   }
 
   &-author {
-    margin-bottom: 64px;
+    margin-bottom: 61px;
 
     color: $color-dark-gray;
-    font-size: 12px;
+    font-size: 80%;
     font-weight: 400;
     line-height: 19.2px;
   }
@@ -219,12 +253,15 @@
     color: $color-orange;
     text-transform: uppercase;
   }
+
+  .btn-news2 {
+    margin-top: -17px;
+  }
 }
 
 .page-app {
   grid-auto-rows: auto;
 
-  @include padding-y(100);
   text-align: center;
 
   &-h2 {
@@ -233,12 +270,21 @@
 
   &-item {
     &-left {
-      margin: 16px;
+      margin-top: 18px;
+
+      font-size: 15.6px;
       text-align: left;
-      
+
       & > p:nth-of-type(2) {
-        margin-bottom: 16px;
+        margin-top: -7px;
+        margin-bottom: 15px;
       }
+    }
+
+    &-right {
+      margin-bottom: 16px;
+
+      padding-left: 20px;
     }
   }
 }

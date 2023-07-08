@@ -14,15 +14,15 @@
 
   margin: 0 auto;
 
-  width: 319px;
-  height: 66px;
+  max-width: 326px;
+  min-height: 66px;
 
   border-radius: 5px;
   border: 1px solid #fff;
 }
 
 .btn-news {
-  padding: 16px 30px;
+  padding: 17px 32px;
 
   width: 135px;
   height: 53px;
@@ -46,7 +46,7 @@
   width: 131px;
   height: 53px;
 
-  padding: 17px 40px;
+  padding: 19px 41px;
 
   color: #fff;
   font-size: 12.8px;
@@ -76,7 +76,6 @@
   line-height: 150%;
 
   border-radius: 5px;
-  
 }
 
 .btn-purple {
@@ -84,5 +83,5 @@
 }
 
 .btn-red {
-  background:  $color-red;
+  background: $color-red;
 }

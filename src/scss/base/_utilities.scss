@@ -41,6 +41,10 @@
   @include margin-y(200);
 }
 
+.pt-100 {
+  padding-top: 100px;
+}
+
 .py-200 {
   @include padding-y(200);
 }
